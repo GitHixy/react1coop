@@ -1,0 +1,29 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 30px;
+    margin-top: 10vh;
+}
+
+.mainBtn {
+    background: #fff;
+    color: #3964E4;
+    border: 1px solid #3964E4;
+    border-radius: 20px;
+    padding: 5px 30px;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h1 span {
+    color: #FFB001;
+}
+
+p {
+    color: grey;
+}

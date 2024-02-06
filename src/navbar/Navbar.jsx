@@ -1,6 +1,6 @@
 import Logo from "./logo/Logo";
 import "./navbar.css";
-import NavBtn from "./navBtn/NavBtn";
+import NavBtn from "../btn/Btn";
 import NavLink from "./navLinks/NavLink";
 const Navbar = () => {
     return(
@@ -14,7 +14,7 @@ const Navbar = () => {
          <NavLink name="Gallery"/>
          <NavLink name="Contact"/>
         </div>
-        <NavBtn />
+        <NavBtn className="navBtn" text="Sign In"/>
         </nav>
         </>
     )

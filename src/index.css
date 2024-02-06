@@ -1,6 +1,7 @@
-body {
+* {
   margin: 0;
   object-fit: cover;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
