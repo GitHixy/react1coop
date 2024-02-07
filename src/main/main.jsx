@@ -7,19 +7,19 @@ import Card from "./card/Card";
 
 const Main = () => {
   const [loading, setLoading] = useState(false);
-  const [songs, setSongs] = useState([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const loadSongs = async () => {
+    const loadUsers = async () => {
       setLoading(true);
 
       const res = await axios.get("https://jsonplaceholder.typicode.com/users");
 
-      setSongs(res.data);
+      setUsers([...res.data]);
 
       setLoading(false);
     };
-    loadSongs();
+    loadUsers();
   }, []);
 
   return (
@@ -34,10 +34,10 @@ const Main = () => {
       <div className="card_wrapper">
         {loading ? (
           <h1>Loading...</h1>
-        ) : songs.length > 0 ? (
-          songs.map((el) => <Card key={el.id} title={el.name} />)
+        ) : users.length > 0 ? (
+          users.map((el) => <Card key={el.id} title={el.name} />)
         ) : (
-          <h1>No songs found</h1>
+          <h1>No Users found</h1>
         )}
       </div>
     </main>
