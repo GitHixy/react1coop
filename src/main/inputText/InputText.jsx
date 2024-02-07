@@ -4,18 +4,22 @@ import { useState } from "react";
 const InputText = () => {
     let [text, setText] = useState("Search for places...")
 
+    setText = (ev) => {
+      text = ev.target.value
+    }
+
   return (
     <>
-      <div class="coolinput">
-        <label for="input" class="text">
+      <div className="coolinput">
+        <label htmlFor="input" className="text">
           Places:
         </label>
         <input
           type="text"
           placeholder= {text}
           name="input"
-          class="input"
-          onChange={(ev) => setText(text = ev.target.value)}
+          className="input"
+          onChange={setText}
         />
       </div>
     </>

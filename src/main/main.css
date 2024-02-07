@@ -27,3 +27,9 @@ h1 span {
 p {
     color: grey;
 }
+
+.card_wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 10vh;
+}
